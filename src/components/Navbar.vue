@@ -15,7 +15,15 @@
     </v-navigation-drawer>
     <v-app-bar app dark color="pink lighten-4">
       <v-app-bar-nav-icon @click="sideNav = !sideNav" class="hidden-md-and-up"></v-app-bar-nav-icon>
-      <v-toolbar-title>Online Store</v-toolbar-title>
+      <v-toolbar-title>
+        <router-link
+          :to="'/'"
+          tag="h2"
+          class="store_title"
+        >
+          Online Store
+        </router-link>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn text small dark
              class="hidden-sm-and-down"
@@ -68,3 +76,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.store_title {
+  cursor: pointer;
+}
+</style>
